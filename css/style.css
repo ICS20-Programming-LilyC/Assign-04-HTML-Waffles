@@ -5,10 +5,11 @@
 */
 body {
   background-color: peachpuff;
+  padding-left: 20px; padding-right: 20px;
 }
 
 h1 {
-  background-color: rgb(37 78 112);
+  background-color: rgb(78 89 140);
   color: hsl(74deg 31% 84%);
   padding: 40px;
   text-align: center;

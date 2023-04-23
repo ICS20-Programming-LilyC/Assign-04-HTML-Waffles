@@ -4,133 +4,161 @@
 
    <!--Meta data-->
    <meta charset="utf-8">
-   <meta name="description" content="Waffles and chicken order">
+   <meta name="description" content="Waffles order">
    <meta name="keywords" content="immaculata, ics2o">
    <meta name="author" content="Lily">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    <!--Favicon-->
-   <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
-   <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
-   <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-   <link rel="manifest" href="./favicon/site.webmanifest">
+   <link rel="apple-touch-icon" sizes="180x180" href="./fav_index/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="./fav_index/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="./fav_index/favicon-16x16.png">
+   <link rel="manifest" href="./fav_index/site.webmanifest">
    
    <!--MDL theme-->
-   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-red.min.css">
+   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-indigo.min.css" /> 
+
 
    <!--Link to CSS file-->
    <link rel="stylesheet" href="./css/style.css">
-   
+
    <!--Title-->
-   <title>Waffles and Fried Chicken</title>
+   <title>Waffles</title>
  </head>
  <body>
-   
-   <!--More MDL code-->
-   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+   <!--Link to js file-->
    <script src="./js/script.js"></script>
 
-   <!-- Header -->
-   <h1>Waffles and Fried Chicken Orders with Javascript</h1>
+   <!--Header-->
+   <h1>Waffle Orders with Javascript</h1>
 
-   <!-- Image -->
-   <img src="./images/wafflesAndChicken.jpg" alt="Waffles with a side of fried chicken" width="400" length="400">
-     
-   <!-- Text for welcome message -->
-   <p>Welcome to our waffles and deep fried chicken company. On this webpage you can place an order for a waffles with your choice of topping and an optional side of fried chicken. We have a variety of different sizes and toppings so that you can customize your doughnut.</p>
+   <!--Text-->
+   <p>Welcome to our waffles breakfast company. With this webpage you can place an order for a waffles with your choice of topping and an optional drink. We have a variety of different sizes and toppings so that you can customize your waffle. We hope you enjoy our  </p>
 
-   <!-- Table for placing the menu/prices and user order side-by-side -->
-         <h4>Our Menu and Prices:</h4>
+   <!--Image-->
+   <center>
+     <img src="./images/classicWaffles.jpg" alt="Waffles" width="400" length="400">
+   </center>
 
-         <!-- Table listing options and prices -->
-         <table>
-           <tr>
-             <th class="border">Size</th>
-             <th class="border">Price</th>
-           </tr>
-           <tr>
-             <td class="border">Small</td>
-             <td class="border">$2.00</td>
-           </tr>
-           <tr>
-             <td class="border">Medium</td>
-             <td class="border">$3.00</td>
-           </tr>
-           <tr>
-             <td class="border">Large</td>
-             <td class="border">$4.00</td>
-           </tr>
-           <tr>
-             <td class="border">Frozen drink</td>
-             <td class="border">$3.00 each</td>
-           </tr>
-         </table>
+   <!--Table for prices and user order (side-by-side)-->
+   <center>
+     <h4>Menu:</h4>
+   </center>
 
-         <!-- Adding div for results under the menu for style - displayed beside user order -->
-         <h4>Choose size:</h4>
-         <div id="results"></div>
-       </td>
+   <!--Table of options including prices-->
+   <center>
+     <table>
+       <tr>
+         <th class="border">Sizes:</th>
+         <th class="border">Price:</th>
+       </tr>
+       <tr>
+         <td class="border">Small</td>
+         <td class="border">$3.00</td>
+       </tr>
+       <tr>
+         <td class="border">Medium</td>
+         <td class="border">$4.00</td>
+       </tr>
+       <tr>
+         <td class="border">Large</td>
+         <td class="border">$5.00</td>
+       </tr>
+       <tr>
+         <td class="border">Breakfast Drink (optional)</td>
+         <td class="border">$2.00</td>
+       </tr>
+     </table>
+     <br>
+   </center>
+   
+   <!--Form to allow user input-->
+   <form action="javascript:WaffleOrder()">
+     <h4>Please indicate the size and topping you want for you pancake:</h4>
 
-        <!-- Form for user input -->
-        <form action="javascript:orderSent()">
+   <!--Multiple choice - picking size of pancake-->
+     <label for="size">Select a size of pancake for your order</label>
+     <select id="size" name="size">
+       <option value="0">-- Size --</option>
+       <option value="small">Small</option>
+       <option value="medium">Medium</option>
+       <option value="large">Large</option>
+     </select>
+     <br>
+     <br>
 
-             <!-- Multiple choice - picking a meat type -->
-             <label for="size">Choose a size for the doughnut</label>
-             <select id="size" name="size">
-               <option value="0">-- Size --</option>
-               <option value="small">Small</option>
-               <option value="medium">Medium</option>
-               <option value="large">Large</option>
-             </select><br><br>
+     <!--Multiple choice - picking an optinal breakfast drink-->
+     <label for="drinks">Choose an optinal breakfast drink:</label>
+     <select id="drinks" name="drinks">
+       <option value="0">-- Drinks --</option>
+       <option value="coffee">Coffee</option>
+       <option value="tea">Tea</option>
+       <option value="orange-juice">Orange Juice</option>
+       <option value="apple-juice">Apple Juice</option>
+     </select>
+     <br>
+     <br>
 
-             <!-- Multiple choice - picking a sandwich size -->
-             <label for="flavour">Choose a flavour</label>
-             <select id="flavour" name="flavour">
-               <option value="0">-- Flavour --</option>
-               <option value="vanilla">Vanilla</option>
-               <option value="chocolate">Chocolate</option>
-             </select>
-        
-             <!-- MDL checkboxes for toppings -->
-             <h5>Choose Your Toppings:</h5>
-<!-- First checkbox - sprinkles -->
-             <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-               <span class="mdl-checkbox__label">Sprinkles</span>
-               <input type="checkbox" id="sprinkles" name="sprinkles" class="mdl-checkbox__input"><br><br>
-             </label>
+     <!--MDL checkboxes for drink-->
+     <h4>Choose your pancake topping:</h4>
+     
+     <!--First checkbox - Original-->
+     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+       <span class="mdl-checkbox__label">Original</span>
+       <input type="checkbox" id="original" name="original" class="mdl-checkbox__input">
+       <br>
+       <br>
+     </label>
 
-             <!--Second checkbox - chocolate shavings -->
-             <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-               <span class="mdl-checkbox__label">Chocolate Shavings</span>
-               <input type="checkbox" id="chocolate shavings" name="chocolate shavings" class="mdl-checkbox__input"><br><br>
-             </label>
+     <!--Second checkbox - Cinnamon & sugar-->
+     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+       <span class="mdl-checkbox__label">Cinnamon & sugar</span>
+       <input type="checkbox" id="cinnamon-and-sugar" name="cinnamon and sugar" class="mdl-checkbox__input">
+       <br>
+       <br>
+     </label>
 
-             <!-- Third checkbox - skor bits -->
-             <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-               <span class="mdl-checkbox__label">Skor bits</span>
-               <input type="checkbox" id="skor bits" name="skor bits" class="mdl-checkbox__input"><br><br>
-             </label>
+     <!--Third checkbox - Chocolate or nutella drizzlev-->
+     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+       <span class="mdl-checkbox__label">Chocolate or nutella drizzle</span>
+       <input type="checkbox" id="chocolate-or-nutella-drizzle" name="chocolate or nutella drizzle" class="mdl-checkbox__input">
+       <br>
+       <br>
+     </label>
 
-             <!-- Fourth checkbox - caramel syrup -->
-             <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-               <span class="mdl-checkbox__label">Caramel syrup</span>
-               <input type="checkbox" id="caramel syrup" name="caramel syrup" class="mdl-checkbox__input"><br><br>
-             </label>
+     <!--Fourth checkbox - Whipped cream and fruit-->
+     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+       <span class="mdl-checkbox__label">Whipped cream and fruit</span>
+       <input type="checkbox" id="whipped-cream-and-fruit" name="whipped cream and fruit" class="mdl-checkbox__input">
+       <br>
+       <br>
+     </label>
 
-             <!-- MDL number input with floating label for garlic potato side -->
-             <h5>Choose Your Sides</h5>
-             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-               <input class="mdl-textfield__input" type="number" id="drinks" step="1" value="0" min="0" max="6" name="drinks">
-               <label class="mdl-textfield__label" for="drinks">Pick a number of drinks:</label>
-             </div><br>
+      <!--Fith checkbox - Fried Eggs and bacon-->
+     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+       <span class="mdl-checkbox__label">Fried Eggs and bacon</span>
+       <input type="checkbox" id="fried-eggs-and-bacon" name="fried eggs and bacon" class="mdl-checkbox__input">
+     </label>
+      <br>
+      <br>
 
-             <!-- Adding id to submit button for styling -->
-             <input type="submit" id="red" value="Submit Your Order">
-           </form>
-         </div>
-       </td>
-     </tr>
-   </table>
- </body>
+     <!--MDL number input with floating label for -->
+     <h4>Please indicate the number of drinks you would like to purchase below:</h4>
+     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+       <input class="mdl-textfield__input" type="number" id="drinks-amount" step="1" min="0" name="drinks">
+       <label class="mdl-textfield__label" for="drinks">0</label>
+     </div>
+     <br>
+     <br>
+
+     <!--Adding id to submit button to style button-->
+     <input type="submit" id="sumbit" value="Submit Your Order" button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+     <br>
+     <br>
+
+     <!--Div for results-->
+     <div id="results"></div>
+   </form>
+ </body>
 </html>

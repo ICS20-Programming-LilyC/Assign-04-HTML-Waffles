@@ -4,13 +4,13 @@
 * Assign-03-HTML-area-perimeter-semicircle
 */
 body {
-  background-color: peachpuff;
+  background-color: antiquewhite;
   padding-left: 20px; padding-right: 20px;
 }
 
 h1 {
-  background-color: rgb(78 89 140);
-  color: hsl(74deg 31% 84%);
+  background-color: rgb(164 137 113);
+  color: hsl(22deg 19% 36%);
   padding: 40px;
   text-align: center;
 }
@@ -21,18 +21,18 @@ h3 {
 }
 
 h4 {
-  color: #254e70;
+  color: #594236;
   padding: 10px;
 }
 
 p {
-  background-color: #dce2c8;
+  background-color: #e8c9ab;
   color: #000;
   padding: 10px;
 }
 
 div {
-  background-color: #dce2c8;
-  color: #457b9d;
+  background-color: #e8c9ab;
+  color: #6f584b;
   padding: 10px;
 }

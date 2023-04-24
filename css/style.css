@@ -31,6 +31,11 @@ p {
   padding: 10px;
 }
 
+table, th, td {
+  border: 3px solid black;
+  border-collapse: collapse;
+}
+
 div {
   background-color: #e8c9ab;
   color: #6f584b;

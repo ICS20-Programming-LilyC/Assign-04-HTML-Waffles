@@ -6,13 +6,12 @@
 
 "use strict"
 
-"use strict"
-
 // Function that executes the user's food order
 function WaffleOrder() {
 
   // Determining a constant for tax rate
   const HST = 0.13;
+  
   
   // Initializing variables
   let baseWaffleCost = 0;
@@ -38,7 +37,10 @@ function WaffleOrder() {
   // If the waffle size is large
   else if (waffleLarge == "5.00") {
     baseWaffleCost = 5.00;
-  }
+  
+  //Else the waffle order will be 0 dollars
+    else  baseWaffleCost= 0.00;
+
 
   // Determining the number of checkboxes selected
   let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');

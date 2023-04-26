@@ -25,6 +25,10 @@ h4 {
   padding: 10px;
 }
 
+h6 {
+  color: #0833dd;
+}
+
 p {
   background-color: #e8c9ab;
   color: #000;
@@ -34,10 +38,16 @@ p {
 table, th, td {
   border: 3px solid black;
   border-collapse: collapse;
+  background-color: #937c6c;
+}
+
+form {
+  background-color: #e8c9ab;
+  padding: 10px;
 }
 
 div {
-  background-color: #e8c9ab;
-  color: #6f584b;
+  background-color: #937c6c;
+  color: #342809;
   padding: 10px;
 }

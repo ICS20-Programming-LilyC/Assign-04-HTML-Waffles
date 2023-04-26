@@ -10,22 +10,21 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    <!--Favicon-->
-   <link rel="apple-touch-icon" sizes="180x180" href="./fav_index1/apple-touch-icon.png">
-   <link rel="icon" type="image/png" sizes="32x32" href="./fav_index1/favicon-32x32.png">
-   <link rel="icon" type="image/png" sizes="16x16" href="./fav_index1/favicon-32x32.png">
-   <link rel="manifest" href="./fav_index1/site.webmanifest">
-   
-   <!--MDL theme-->
-   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-indigo.min.css" /> 
-
+   <link rel="apple-touch-icon" sizes="180x180" href="./fav_index/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="./fav_index/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="./fav_index/favicon-16x16.png">
+   <link rel="manifest" href="./fav_index/site.webmanifest">
 
    <!--Link to CSS file-->
    <link rel="stylesheet" href="./css/style.css">
 
    <!--Title-->
-   <title>Waffles</title>
+   <title>Waffles Order webpage</title>
  </head>
  <body>
+
+   <!--MDL theme-->
+   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-indigo.min.css" /> 
 
    <!--Link to js file-->
    <script src="./js/script.js"></script>
@@ -34,7 +33,7 @@
    <h1>Waffle Orders with Javascript</h1>
 
    <!--Text-->
-   <p>Welcome to our waffles breakfast company. With this webpage you can place an order for a waffles with your choice of topping and an optional drink. We have a variety of different sizes and toppings so that you can customize your waffle. We hope you enjoy our  </p>
+   <p>Welcome to our waffles breakfast company. With this webpage you can place an order for a waffles with your choice of topping and an optional items. We have a variety of different sizes and toppings so that you can customize your own waffle. In addition with optional breakfast drinks and fried chicken tenders. We hope you enjoy your meal!</p>
 
    <!--Image-->
    <center>
@@ -66,7 +65,15 @@
          <td class="border">$5.00</td>
        </tr>
        <tr>
+         <td class="border">Toppings</td>
+         <td class="border">$2.00 (each)</td>
+       </tr>
+       <tr>
          <td class="border">Breakfast Drink (optional)</td>
+         <td class="border">$1.00</td>
+       </tr>
+       <tr>
+         <td class="border">Fried Chicken Tender (optional)</td>
          <td class="border">$2.00</td>
        </tr>
      </table>
@@ -75,10 +82,10 @@
    
    <!--Form to allow user input-->
    <form action="javascript:WaffleOrder()">
-     <h4>Please indicate the size and topping you want for you pancake:</h4>
+     <h4>Please indicate the size of waffle you would like:</h4>
 
    <!--Multiple choice - picking size of pancake-->
-     <label for="size">Select a size of pancake for your order</label>
+     <label for="size">Select a size of waffle for your order:</label>
      <select id="size" name="size">
        <option value="0">-- Size --</option>
        <option value="small">Small</option>
@@ -88,8 +95,73 @@
      <br>
      <br>
 
-     <!--Multiple choice - picking an optinal breakfast drink-->
-     <label for="drinks">Choose an optinal breakfast drink:</label>
+  <!--MDL checkboxes for pancake topping-->
+     <h4>Choose your waffle topping:</h4>
+     
+  <!--First checkbox - Original-->
+     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+       <span class="mdl-checkbox__label">Original</span>
+       <input type="checkbox" id="original" name="original"  class="mdl-checkbox__input">
+     </label>
+     <br>
+     <br>
+
+  <!--Second checkbox - Cinnamon & sugar-->
+     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+       <span class="mdl-checkbox__label">Cinnamon & sugar</span>
+       <input type="checkbox" id="cinnamon-and-sugar" name="cinnamon and sugar"  class="mdl-checkbox__input">
+     </label>
+     <br>
+     <br>
+
+  <!--Third checkbox - Chocolate or nutella drizzle-->
+     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+       <span class="mdl-checkbox__label">Chocolate or nutella drizzle</span>
+       <input type="checkbox" id="chocolate-or-nutella-drizzle" name="chocolate or nutella drizzle"  class="mdl-checkbox__input">
+     </label>
+     <br>
+     <br>
+
+  <!--Fourth checkbox - Whipped cream and fruit-->
+     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+       <span class="mdl-checkbox__label">Whipped cream and fruit</span>
+       <input type="checkbox" id="whipped-cream-and-fruit" name="whipped cream and fruit"  class="mdl-checkbox__input">
+     </label>
+      <br>
+      <br>
+
+  <!--Fith checkbox - Fried Eggs and bacon-->
+     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+       <span class="mdl-checkbox__label">Fried Eggs and bacon</span>
+       <input type="checkbox" id="fried-eggs-and-bacon" name="fried eggs and bacon"  class="mdl-checkbox__input">
+     </label>
+      <br>
+      <br>
+
+  <!--Optional iteams-->
+     <h4>If you want to order any optional iteams, please select them below:</h4>
+     <h6>For our optional items we have, a variety of breakfast drinks, as well as our homemade fried chicken tenders.</h6>
+
+<!--Chicken tenders chexboxes-->
+     <p>Would you like chicken tenders with your meal? If not, select the "no" option and input "0" for the amount of chicken tenders required for your order.</p>
+     
+  <!--MDL radio button (Yes)-->
+     <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+       <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
+       <span class="mdl-radio__label">Yes</span>
+     </label>
+
+  <!--MDL radio button (Off)-->
+     <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+       <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
+       <span class="mdl-radio__label">No</span>
+     </label>
+     <br>
+     <br>
+     <br>
+
+     <!--Multiple choice - picking an optional breakfast drink-->
+     <label for="drinks">Choose a breakfast drink:</label>
      <select id="drinks" name="drinks">
        <option value="0">-- Drinks --</option>
        <option value="coffee">Coffee</option>
@@ -100,65 +172,30 @@
      <br>
      <br>
 
-     <!--MDL checkboxes for drink-->
-     <h4>Choose your pancake topping:</h4>
-     
-     <!--First checkbox - Original-->
-     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-       <span class="mdl-checkbox__label">Original</span>
-       <input type="checkbox" id="original" name="original" class="mdl-checkbox__input">
-       <br>
-       <br>
-     </label>
+     <!--Amonut of user's optional iteams in their order-->
+     <h4>If you're ordering any of our optional items, then please indicate below the amount of drinks and/or  tenders you would like in your order:</h4>
 
-     <!--Second checkbox - Cinnamon & sugar-->
-     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-       <span class="mdl-checkbox__label">Cinnamon & sugar</span>
-       <input type="checkbox" id="cinnamon-and-sugar" name="cinnamon and sugar" class="mdl-checkbox__input">
-       <br>
-       <br>
-     </label>
-
-     <!--Third checkbox - Chocolate or nutella drizzlev-->
-     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-       <span class="mdl-checkbox__label">Chocolate or nutella drizzle</span>
-       <input type="checkbox" id="chocolate-or-nutella-drizzle" name="chocolate or nutella drizzle" class="mdl-checkbox__input">
-       <br>
-       <br>
-     </label>
-
-     <!--Fourth checkbox - Whipped cream and fruit-->
-     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-       <span class="mdl-checkbox__label">Whipped cream and fruit</span>
-       <input type="checkbox" id="whipped-cream-and-fruit" name="whipped cream and fruit" class="mdl-checkbox__input">
-       <br>
-       <br>
-     </label>
-
-      <!--Fith checkbox - Fried Eggs and bacon-->
-     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-       <span class="mdl-checkbox__label">Fried Eggs and bacon</span>
-       <input type="checkbox" id="fried-eggs-and-bacon" name="fried eggs and bacon" class="mdl-checkbox__input">
-     </label>
-      <br>
-      <br>
-
-     <!--MDL number input with floating label for -->
-     <h4>Please indicate the number of drinks you would like to purchase below:</h4>
-     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-       <input class="mdl-textfield__input" type="number" id="drinks-amount" step="1" min="0" name="drinks">
-       <label class="mdl-textfield__label" for="drinks">0</label>
-     </div>
+  <!--Input for optional breakfast drink-->
+        <label for="amount-drinks">How many drinks would you like?</label>
+        <input type="number" step="1" min="0" id="amount-drinks" placeholder="Number of drinks...">
      <br>
      <br>
 
-     <!--Adding id to submit button to style button-->
+  <!--Input for optional fried chicken tenders-->
+        <label for="fried-chicken-tenders">How many fried chicken tenders would you like?</label>
+        <input type="number" step="1" min="0" id="fried-chicken-tenders" placeholder=" Number of fried chicken tenders...">
+     <br>
+     <br>
+
+  <!--Adding id to submit button to style button-->
      <input type="submit" id="sumbit" value="Submit Your Order" button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+     </form>
      <br>
      <br>
 
-     <!--Div for results-->
+  <!--Div for results-->
      <div id="results"></div>
-   </form>
+    <br>
+    <br>
  </body>
 </html>

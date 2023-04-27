@@ -64,6 +64,6 @@ function WaffleOrder() {
   let total = subtotal + taxes;
 
   // Displaying the total to the user in the "results" div
-  document.getElementById("results").innerHTML = "You order is a " + waffleSize + " waffle. " + "For your waffle, you chose " + numberOfWaffleToppings + " toppings. You also decided to add " + numberOfFriedChickenTenders + " fried chicken tender(s) to your order, along with " + numberOfBreakfastDrinks + " beverage(s). Your subtotal is $" + subtotal.toFixed(2) + ". The calculated amount of taxes added due to the HST rate is $" + taxes.toFixed(2) + ". Which makes your total $" + total.toFixed(2) + ". Thanks for your purchase!";
+  document.getElementById("results").innerHTML = "Your order is a " + waffleSize + " waffle. " + "For your waffle, you chose " + numberOfWaffleToppings + " toppings. You also decided to add " + numberOfFriedChickenTenders + " fried chicken tender(s) to your order, along with " + numberOfBreakfastDrinks + " beverage(s). Your subtotal is $" + subtotal.toFixed(2) + ". The calculated amount of taxes added due to the HST rate is $" + taxes.toFixed(2) + ". Which makes your total $" + total.toFixed(2) + ". Thanks for your purchase!";
   
 }

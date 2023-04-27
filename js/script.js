@@ -6,6 +6,27 @@
 
 "use strict"
 
+// Function to disable toppings until doughnut is selected
+onchange="toggleToppings()"
+function toggleToppings() {
+  let sizeAllow = document.getElementById("size").value;
+
+  if (sizeAllow !== "0") {
+    document.getElementById("original").disabled = false;
+    document.getElementById("cinnamon-and-sugar").disabled = false;
+    document.getElementById("chocolate-or-nutella-drizzle").disabled = false;
+    document.getElementById("whipped-cream-and-fruit").disabled = false;
+    document.getElementById("fried-eggs-and-bacon").disabled = false;
+  } 
+  else {
+    document.getElementById("original").disabled = true;
+    document.getElementById("cinnamon-and-sugar").disabled = true;
+    document.getElementById("chocolate-or-nutella-drizzle").disabled = true;
+    document.getElementById("whipped-cream-and-fruit").disabled = true;
+    document.getElementById("fried-eggs-and-bacon").disabled = true;
+  }
+}
+
 // Function that executes the user's food order
 function WaffleOrder() {
 
@@ -64,6 +85,6 @@ function WaffleOrder() {
   let total = subtotal + taxes;
 
   // Displaying the total to the user in the "results" div
-  document.getElementById("results").innerHTML = "Your order is a " + waffleSize + " waffle. " + "For your waffle, you chose " + numberOfWaffleToppings + " toppings. You also decided to add " + numberOfFriedChickenTenders + " fried chicken tender(s) to your order, along with " + numberOfBreakfastDrinks + " beverage(s). Your subtotal is $" + subtotal.toFixed(2) + ". The calculated amount of taxes added due to the HST rate is $" + taxes.toFixed(2) + ". Which makes your total $" + total.toFixed(2) + ". Thanks for your purchase!";
+  document.getElementById("results").innerHTML = "Your order is a " + waffleSize + " waffle. " + "For your waffle, you chose " + numberOfWaffleToppings + " topping(s). You also decided to add " + numberOfFriedChickenTenders + " fried chicken tender(s) to your order, along with " + numberOfBreakfastDrinks + " beverage(s). Your subtotal is $" + subtotal.toFixed(2) + ". The calculated amount of taxes added due to the HST rate is $" + taxes.toFixed(2) + ". Which makes your total $" + total.toFixed(2) + ". Thanks for your purchase!";
   
 }

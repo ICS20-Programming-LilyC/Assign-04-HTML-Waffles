@@ -6,7 +6,7 @@
 
 "use strict"
 
-// Function to disable toppings until doughnut is selected
+// Function to disable toppings until waffle size is selected.
 onchange="toggleToppings()"
 function toggleToppings() {
   let sizeAllow = document.getElementById("size").value;
@@ -18,6 +18,7 @@ function toggleToppings() {
     document.getElementById("whipped-cream-and-fruit").disabled = false;
     document.getElementById("fried-eggs-and-bacon").disabled = false;
   } 
+
   else {
     document.getElementById("original").disabled = true;
     document.getElementById("cinnamon-and-sugar").disabled = true;
@@ -27,7 +28,7 @@ function toggleToppings() {
   }
 }
 
-// Function that executes the user's food order
+// Function that executes the user's food order.
 function WaffleOrder() {
 
 // Determining constants for tax rate, my toppings price, fried chicken prices and breakfast drinks price.
@@ -47,10 +48,10 @@ function WaffleOrder() {
   // Establishing the number of waffle toppings selected given the number of checkboxes selected.
   let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
 
-  // Using determined value to declare variable for number of toppings chosen
+  // Using a determined value to declare a variable for the number of toppings chosen.
   let numberOfWaffleToppings = checkboxes.length;
   
-  // Determining the cost of the toppings using number of toppings variable and cost of toppings constant
+  // Determining the cost of the toppings using the number of toppings variable and cost of toppings constant.
   let costOfToppings = numberOfWaffleToppings * PRICE_WAFFLE_TOPPINGS;
   
   // Establishing the base cost of a waffle using compound if statements.
@@ -79,12 +80,12 @@ function WaffleOrder() {
   let costOfFriedChicken = numberOfFriedChickenTenders * PRICE_FRIED_CHICKEN_TENDERS;
   let costOfBreakfastDrinks = numberOfBreakfastDrinks * PRICE_BREAKFAST_DRINKS;
   
-  // Calculating the user's subtotal, tax and total for their order
+  // Calculating the user's subtotal, tax and total for their order.
   let subtotal = baseWaffleCost + costOfToppings + costOfFriedChicken + costOfBreakfastDrinks;
   let taxes = subtotal * HST;
   let total = subtotal + taxes;
 
-  // Displaying the total to the user in the "results" div
+  // Displaying the total to the user in the "results" div.
   document.getElementById("results").innerHTML = "Your order is a " + waffleSize + " waffle. " + "For your waffle, you chose " + numberOfWaffleToppings + " topping(s). You also decided to add " + numberOfFriedChickenTenders + " fried chicken tender(s) to your order, along with " + numberOfBreakfastDrinks + " beverage(s). Your subtotal is $" + subtotal.toFixed(2) + ". The calculated amount of taxes added due to the HST rate is $" + taxes.toFixed(2) + ". Which makes your total $" + total.toFixed(2) + ". Thanks for your purchase!";
   
 }
